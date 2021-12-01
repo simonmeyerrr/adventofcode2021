@@ -1,0 +1,2 @@
+console.log(require('fs').readFileSync('a').toString().split('\n').map(b=>parseInt(b)).reduce((c,d,e,f)=>c+(e&&d>f[e-1]?1:0),0))
+console.log(require('fs').readFileSync('a').toString().split('\n').map(b=>parseInt(b)).reduce((c,d,e,f)=>e>1?[...c,d+f[e-1]+f[e-2]]:c,[]).reduce((g,h,i,j)=>g+(i&&h>j[i-1]?1:0),0))
