@@ -1,0 +1,2 @@
+console.log(Object.values(require('fs').readFileSync('a').toString().split('\n').map(b=>b.split(' ')).map(c=>[c[0],parseInt(c[1])]).reduce((d,e)=>({f:d.f+(e[0]==="forward"?e[1]:0),g:d.g+(e[0]==="up"?-e[1]:e[0]==="down"?e[1]:0)}),{f:0,g:0})).reduce((h,i)=>h*i,1))
+console.log(Object.values(require('fs').readFileSync('a').toString().split('\n').map(b=>b.split(' ')).map(c=>[c[0],parseInt(c[1])]).reduce((d,e)=>({f:d.f+(e[0]==="forward"?e[1]:0),g:d.g+(e[0]==="up"?-e[1]:e[0]==="down"?e[1]:0),i:d.i+(e[0]==="forward"?e[1]*d.g:0)}),{f:0,g:0,i:0})).reduce((j,k,l,m)=>m[0]*m[2]))
